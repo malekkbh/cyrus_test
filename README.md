@@ -8,6 +8,6 @@ run in your terminal :
     $ yarn pods // (optional) if you wish to start it on ios </br>
     $ yarn android // to start android </br>
     </br></br>
-    <a href>Android .apk file</a>
+    <a href="https://github.com/malekkbh/cyrus_test/raw/master/android/app/release/app-release.apk">Android .apk file</a>
 
     
