@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { KeyValueItem } from '../index';
-import { strings } from '../../res';
+import { strings } from '../../../res';
 
 const MovieDetails = (props) => {
     const { data , largeFont } = props;

@@ -4,7 +4,7 @@
 import React from 'react';
 import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
-import { colors, globalStyle, sizes } from '../../res';
+import { colors, globalStyle, sizes } from '../../../res';
 import { Platform } from 'react-native';
 
 /** padding right by platform */

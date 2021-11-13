@@ -1,22 +1,29 @@
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import React, { useState } from 'react';
+import { colors, globalStyle } from '../src/res';
 import Cyrus_Context from './Cyrus_Context';
 
 var timer = null;
 const Cyrus_Provider = (props) => {
+  const [colorScheme, setColorSchame] = useState(null);
+  const [choosenSortTab, setChoosenSortTab] = useState('Date');
+  const [userQuestions, setUserQuestions] = useState({});
 
-  const [movies, setMovies] = useState([]);
-  const [moviesToDisplay, setMoviesTodisplay] = useState([]);
-  const [choosenGeners, setChoosenGeners] = useState([]);
+  const setColorSchame_inSorage = (val) => {
+    setColorSchame(val);
+    AsyncStorage.setItem('colorScheme', val);
+    colors.colorScheme = val;
+  }
 
   return (
     <Cyrus_Context.Provider
       value={{
-        movies: movies,
-        setMovies: (val) => setMovies(val),
-        moviesToDisplay: moviesToDisplay,
-        setMoviesTodisplay: (val) => setMoviesTodisplay(val),
-        choosenGeners: choosenGeners,
-        setChoosenGeners: (val) => setChoosenGeners(val),
+        colorScheme,
+        setColorSchame,
+        choosenSortTab,
+        setChoosenSortTab,
+        userQuestions,
+        setUserQuestions,
       }}>
       {props.children}
     </Cyrus_Context.Provider>

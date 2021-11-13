@@ -1,27 +1,20 @@
-import BTN from "./BTN/btn";
-import CheckBoxComponent from "./checkBox/checkBox";
+import Input from "./input/input";
 import KeyValueItem from "./keyValueItem/keyValueItem";
 import Loader from "./loader/loader";
-import MenuItem from "./menuItem/menuItem";
-import CyrusModal from "./modal/modal";
-import ModalFilterView from "./modalComponents/modalFilterComponent";
-import ModalSortComponent from "./modalComponents/modalSortComponent";
-import MovieDetails from "./movieDetails/movieDetails";
-import MovieItem from "./movieItem/movieItem";
+import Profile from "./profile/profile";
+import QuestionItem from "./questions/questionItem";
+import Questions from "./questions/questions";
 import Search from "./search/search";
-
+import SortTabs from "./sortTabs/sortTabs";
 
 
 export {
-    MovieItem,
-    KeyValueItem,
-    MovieDetails,
     Search,
+    Input,
+    Profile,
+    KeyValueItem,
+    SortTabs,
+    Questions , 
+    QuestionItem,
     Loader,
-    CyrusModal,
-    MenuItem,
-    ModalSortComponent,
-    ModalFilterView,
-    CheckBoxComponent,
-    BTN, 
 }

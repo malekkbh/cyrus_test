@@ -1,5 +1,3 @@
 export default {
-    mainURl: 'https://raw.githubusercontent.com/FEND16/movie-json-data/master/json/movies-coming-soon.json' , 
-    // mainURl: 'http://server-movies-nodejs.herokuapp.com/movies' , 
-    
+    getUser:(id) =>`https://api.stackexchange.com/2.2/users/${id}/questions?order=desc&sort=creation&site=stackoverflow` 
 }

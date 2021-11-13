@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 import { Text } from 'react-native';
 import { TouchableOpacity } from 'react-native';
-import { colors, globalStyle } from '../../res';
+import { colors, globalStyle } from '../../../res';
 
 const BTN = (props) => {
     return (

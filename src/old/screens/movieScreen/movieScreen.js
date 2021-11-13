@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Image, StyleSheet, View } from 'react-native';
 import { KeyValueItem, MovieDetails } from '../../components';
-import { strings } from '../../res';
+import { strings } from '../../../res';
 
 const MovieScreen = (props) => {
     const { navigation } = props

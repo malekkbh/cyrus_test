@@ -25,4 +25,5 @@ export default {
   unChoosenDotGB :'#B3C9CF', 
   tagGreen:'#00FFB2' , 
   app_light_blue :'#D9FFFB' , 
+  colorScheme:'' , 
 };

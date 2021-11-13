@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { StyleSheet, View, FlatList, Text, Image , TouchableOpacity} from 'react-native';
 import {  MenuItem } from '../index';
-import Cyrus_Context from '../../../store/Cyrus_Context';
-import imagesIndex from '../../assets/images/imagesIndex';
-import { globalStyle, sizes, strings } from '../../res';
+import Cyrus_Context from '../../../../store/Cyrus_Context';
+import imagesIndex from '../../../assets/images/imagesIndex';
+import { globalStyle, sizes, strings } from '../../../res';
 
 const ModalSortComponent = (props) => {
     const { movies, setMoviesTodisplay, setMovies } = useContext(Cyrus_Context);

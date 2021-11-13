@@ -1,6 +1,6 @@
 import React from 'react';
 import {Modal, StyleSheet, View} from 'react-native';
-import {colors} from '../../res/';
+import {colors} from '../../../res';
 
 const CyrusModal = (props) => {
   const params = {

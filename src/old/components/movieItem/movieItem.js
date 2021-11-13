@@ -2,9 +2,9 @@ import React from 'react';
 import { TouchableOpacity } from 'react-native';
 import { Text, View, Image, StyleSheet } from 'react-native';
 import { KeyValueItem, MovieDetails } from '..';
-import { globalStyle, Screens, sizes, strings } from '../../res';
+import { globalStyle, Screens, sizes, strings } from '../../../res';
 import { useNavigation } from '@react-navigation/native';
-import imagesIndex from '../../assets/images/imagesIndex';
+import imagesIndex from '../../../assets/images/imagesIndex';
 
 
 const MovieItem = (props) => {

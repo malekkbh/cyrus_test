@@ -1,12 +1,12 @@
+import StackOverFlowUSer from './stackOverFlowUser/stackOverFlowUser';
 import Splash from './splash/splash';
-import MainScreen from './mainScreen/mainScreen';
-import MovieScreen from './movieScreen/movieScreen'; 
-import SideMenue from './sideMenu/sideMenu';
+import WebView from './webView/webView';
+
+
 
 
 export {
     Splash,
-    MainScreen,
-    MovieScreen,
-    SideMenue,
+    StackOverFlowUSer,
+    WebView
 }

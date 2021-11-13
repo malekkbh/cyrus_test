@@ -1,17 +1,22 @@
 import React from 'react';
+import { useContext } from 'react';
 import { View, StyleSheet, Text } from 'react-native';
+import Cyrus_Context from '../../../store/Cyrus_Context';
 import { globalStyle, sizes } from '../../res';
 
 
 const KeyValueItem = (props) => {
-    const { keyText, value, largeFont } = props;
+    const { keyText, value , ignoreColorScheme } = props;
+    const { colorScheme } = useContext(Cyrus_Context)
+    let isDarkMode = colorScheme == 'dark' ; 
+    ignoreColorScheme && (isDarkMode = null); 
 
-    const keyTextStyle = largeFont ? globalStyle.Rubik_Bold_14 : globalStyle.Rubik_Bold_12;
-    const valueTextStyle = largeFont ? globalStyle?.Rubik_16 : globalStyle.Rubik_14;
+    const keyTextStyle = globalStyle.Rubik_bold(10, isDarkMode);
+    const valueTextStyle = globalStyle.Rubik(10 , isDarkMode);
 
 
     return (
-        <View style={styles.container}>
+        <View style={[styles.container , props.style]}>
             <Text style={styles.textStyle(keyTextStyle)} >{keyText + ": "}</Text>
             <Text style={styles.textStyle(valueTextStyle)} >{value}</Text>
         </View>
@@ -24,7 +29,8 @@ const styles = StyleSheet.create({
         flexWrap: 'wrap',
         maxWidth: sizes.PageWidth - 200,
         alignItems: 'center',
-        marginVertical: 2
+        marginVertical: 2 , 
+        marginLeft: 15
     },
     textStyle: (font) => ({
         color: 'black',

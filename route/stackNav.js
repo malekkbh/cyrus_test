@@ -1,9 +1,8 @@
 
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { Screens, strings } from '../src/res';
-import { MainScreen, MovieScreen, Splash } from '../src/screens';
-import DrawerNav from './drawerNav';
+import { Screens } from '../src/res';
+import { Splash, StackOverFlowUSer, WebView } from '../src/screens';
 
 
 const Stack = createNativeStackNavigator();
@@ -20,16 +19,15 @@ const screenParams = {
         component: Splash,
         options: { headerShown: false },
     },
-    MainScreen: {
-        name: Screens.MainScreen,
-        component: DrawerNav,
-        options: {
-            headerShown: false            
-        }
+    StackOverFlowUser: {
+        name: Screens.StackOverFlowUser,
+        component: StackOverFlowUSer,
+        options: { headerShown: false },
     },
-    MovieScreen: {
-        name: Screens.MovieScreen,
-        component: MovieScreen, 
+     WebView: {
+        name: Screens.WebView,
+        component: WebView,
+        options: { title: '' },
     },
 }
 
@@ -37,8 +35,8 @@ const screenParams = {
 const StackNav = (props) => (
     <Stack.Navigator {...screenParams.navigator}>
         <Stack.Screen {...screenParams.Splash} />
-        <Stack.Screen {...screenParams.MainScreen} />
-        <Stack.Screen {...screenParams.MovieScreen} />
+        <Stack.Screen {...screenParams.StackOverFlowUser} />
+        <Stack.Screen {...screenParams.WebView} />
     </Stack.Navigator>
 )
 

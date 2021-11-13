@@ -2,7 +2,7 @@ import { DrawerActions, useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
 import { Image } from 'react-native';
 import { StyleSheet, View } from 'react-native';
-import imagesIndex from '../../assets/images/imagesIndex';
+import imagesIndex from '../../../assets/images/imagesIndex';
 import { CyrusModal, MenuItem, ModalFilterView, ModalSortComponent } from '../../components';
 
 let viewType = '';

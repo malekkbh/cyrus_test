@@ -1,15 +1,15 @@
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import React, { useContext, useEffect, useRef } from 'react';
-import { Image, StyleSheet, Text, View, Animated } from 'react-native';
+import { Image, StyleSheet, Text, View, Animated, Appearance } from 'react-native';
 import Cyrus_Context from '../../../store/Cyrus_Context';
 import imagesIndex from '../../assets/images/imagesIndex'
-import { globalStyle, Screens, strings, urls } from '../../res';
-import { getAllMovies } from '../../res/api/api';
+import { globalStyle, Screens, strings } from '../../res';
 
 
 const Splash = (props) => {
 
     const { navigation } = props;
-    const { setMovies , setMoviesTodisplay } = useContext(Cyrus_Context);
+    const { setColorSchame } = useContext(Cyrus_Context);
 
     const fadeAnim = useRef(new Animated.Value(1)).current;
 
@@ -36,11 +36,11 @@ const Splash = (props) => {
     }
 
     const navigateToHomePage = () => {
-        navigation.replace(Screens.MainScreen);
+        navigation.replace(Screens.StackOverFlowUser);
     }
 
     const fadeOut = () => {
-        // Will change fadeAnim value to 0 in 3 seconds
+        // Will change fadeAnim value to 0 in 4 seconds
         Animated.timing(fadeAnim, {
             toValue: 0,
             duration: 4000,
@@ -48,14 +48,19 @@ const Splash = (props) => {
         }).start();
     };
 
+    const getPhoneApperance = async () => {
+        const colorScheme = Appearance.getColorScheme();
+        let colorSchemeFromStorage = await AsyncStorage.getItem('colorScheme');
+        setColorSchame(colorSchemeFromStorage || colorScheme );
+    }
+
     useEffect(() => {
+        getPhoneApperance()
         fadeOut();
-        getMoviesFromApi();
         setTimeout(() => {
-            timerDone = true;
-            loadingDataDone && navigateToHomePage()
-        }, 2500);
-    }, [])
+            navigateToHomePage()
+        }, 2.5 * 1000);
+    }, []);
 
     return (
 
@@ -87,4 +92,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default Splash // connect(mapStateToProps, dispatchToProps)(Splash);
+export default Splash;

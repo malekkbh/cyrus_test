@@ -1,7 +1,7 @@
 const Screens = {
-    MainScreen:'MainScreen' , 
-    MovieScreen:'MovieScreen' , 
-    Splash:'Splash',
+    Splash: 'Splash',
+    StackOverFlowUser: 'StackOverFlowUser',
+    WebView: 'WebView',
 }
 
 export default Screens;

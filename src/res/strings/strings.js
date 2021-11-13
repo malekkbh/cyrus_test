@@ -1,6 +1,6 @@
 export default{
   splash_text:'Malek Kabaha - Home Test' , 
-  mainScreenTitle:'Best 100 Movies' , 
+  mainScreenTitle:'Get Stack Overflow Posts' , 
   title:"Title" , 
   year:'Year' , 
   ratings:'Rating AVG', 
@@ -10,4 +10,10 @@ export default{
   searchPlaceholder :'Movie Title , Year , Genres or Actors', 
   sortTitle:'Sort By:' , 
   filterTitle:'Filter:' , 
+  user_id:'User ID' , 
+
+  //** profile */
+  display_name:'Display Name',
+  accept_rate:'Accept Rate',
+  reputation:'Reputation'
 }

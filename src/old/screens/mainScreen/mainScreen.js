@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { FlatList } from 'react-native';
 import { StyleSheet, View } from 'react-native';
-import Cyrus_Context from '../../../store/Cyrus_Context';
+import Cyrus_Context from '../../../../store/Cyrus_Context';
 import { Loader, MovieItem, Search } from '../../components'
-import { sizes, strings } from '../../res';
+import { sizes, strings } from '../../../res';
 
 
 

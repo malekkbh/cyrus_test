@@ -1,9 +1,9 @@
 import React, { useContext, useState } from 'react';
 import { Image, View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { BTN, CheckBoxComponent } from '../index';
-import Cyrus_Context from '../../../store/Cyrus_Context';
-import imagesIndex from '../../assets/images/imagesIndex';
-import { globalStyle, sizes, strings } from '../../res';
+import Cyrus_Context from '../../../../store/Cyrus_Context';
+import imagesIndex from '../../../assets/images/imagesIndex';
+import { globalStyle, sizes, strings } from '../../../res';
 
 const ModalFilterView = (props) => {
 
